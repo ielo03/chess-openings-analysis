@@ -158,4 +158,10 @@ def eco_decode(eco):
 
     return eco
 
-        
+openings_path = 'openings_clusters.feather'
+df = pd.read_feather(openings_path)
+
+# Function to get all the openings in the same cluster as the input
+def eco_cluster(eco):
+    cluster = df.loc[eco, 'Cluster']
+    return df[df['Cluster'] == cluster]
