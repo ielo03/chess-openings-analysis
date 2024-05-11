@@ -163,5 +163,6 @@ df = pd.read_feather(openings_path)
 
 # Function to get all the openings in the same cluster as the input
 def eco_cluster(eco):
+    eco = simplify_eco(eco)
     cluster = df.loc[eco, 'Cluster']
     return df[df['Cluster'] == cluster]
