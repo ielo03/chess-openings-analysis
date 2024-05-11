@@ -61,10 +61,8 @@ def simplify_eco(eco):
         return 'D04'
     if eco.startswith('D') and 7 <= int(eco[1:]) <= 9:
         return 'D07'
-    if eco.startswith('D') and 10 <= int(eco[1:]) <= 15:
+    if eco.startswith('D') and 10 <= int(eco[1:]) <= 19:
         return 'D10'
-    if eco.startswith('D') and 17 <= int(eco[1:]) <= 19:
-        return 'D17'
     if eco.startswith('D') and 20 <= int(eco[1:]) <= 29:
         return 'D20'
     if eco.startswith('D') and 30 <= int(eco[1:]) <= 42:
@@ -143,8 +141,6 @@ def eco_decode(eco):
     if eco == 'D06': return "Queen's Gambit"
     if eco == 'D07': return "Queen's Gambit Declined, Chigorin defence"
     if eco == 'D10': return "Queen's Gambit Declined Slav defence"
-    if eco == 'D16': return "Queen's Gambit Declined Slav accepted, Alapin variation"
-    if eco == 'D17': return "Queen's Gambit Declined Slav, Czech defence"
     if eco == 'D20': return "Queen's gambit accepted"
     if eco == 'D30': return "Queen's gambit declined"
     if eco == 'D43': return "Queen's Gambit Declined semi-Slav"
