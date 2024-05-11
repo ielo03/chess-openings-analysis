@@ -158,6 +158,8 @@ def eco_decode(eco):
 
     return eco
 
+import pandas as pd
+
 openings_path = 'openings_clusters.feather'
 df = pd.read_feather(openings_path)
 
